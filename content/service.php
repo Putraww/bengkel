@@ -1,38 +1,89 @@
-<div class="container-fluid pt-5">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #555;
+}
+</style>
+
+<body>
+
     <div class="container">
-        <div class="text-center pb-2">
-            <h6 class="text-primary text-uppercase font-weight-bold">Our Services</h6>
-            <h1 class="mb-4">Best Services motorcycle</h1>
-        </div>
-        <div class="row pb-3">
-            <div class="col-lg-3 col-md-6 text-center mb-5 align-items-center">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+        <h2>Isi formulir reservasi</h2>
+        <form action="?pg=service-berhasil" method="POST">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
 
-                    <h6 class="text-white font-weight-medium m-0">Pelayanan Cepat</h6>
-                </div>
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="no_telpon" required>
 
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5 align-items-center">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+            <label for="jenismotor">Seri Motor:</label>
+            <input type="text" id="jenismotor" name="jenismotor" required>
 
-                    <h6 class="text-white font-weight-medium m-0">Ramah Pelanggan</h6>
-                </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5 align-items-center">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+            <label for="tanggal">Tanggal Reservasi:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
 
-                    <h6 class="text-white font-weight-medium m-0">Terpercaya</h6>
-                </div>
+            <label for="pesan">Pesan Tambahan:</label>
+            <textarea id="pesan" name="pesan" rows="4"></textarea>
 
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5 align-items-center">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-
-                    <h6 class="text-white font-weight-medium m-0">Barang Dijamin Ori</h6>
-                </div>
-
-            </div>
-        </div>
+            <input type="submit" class="btn btn-primary" name="simpan" value="Kirim">
+        </form>
     </div>
-</div>
+
+</body>
+
+<?php
+$queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DESC LIMIT");
+
+?>
