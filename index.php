@@ -1,18 +1,19 @@
 <?php
-include "koneksi/koneksi.php"
-    ?>
+include "koneksi/koneksi.php";
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Bengkel Motor Jaya</title>
+    <title>Bengkel Motor Honda</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
     <!-- Favicon -->
-    <link href="asset/img/bicycle.svg" rel="icon">
+    <link class="fa-solid fa-motorcycle fa-spin fa-spin-reverse" href="asset/img/m.svg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -37,7 +38,7 @@ include "koneksi/koneksi.php"
                 <div class="d-inline-flex align-items-center text-white">
                     <small><i class="fa fa-phone-alt mr-2"></i>+62 8912-3221-0989</small>
                     <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>bengkelmotorjaya@gmail.com</small>
+                    <small><i class="fa fa-envelope mr-2"></i>bengkelmotorhonda@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
