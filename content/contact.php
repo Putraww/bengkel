@@ -6,93 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontak Kami</title>
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-    }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
 
-    header {
-        background: #50b3a2;
-        color: #ffffff;
-        padding-top: 30px;
-        min-height: 70px;
-        border-bottom: #e8491d 3px solid;
-    }
+        header {
+            background: #50b3a2;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
 
-    header a {
-        color: #ffffff;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 16px;
-    }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
 
-    header ul {
-        padding: 0;
-        list-style: none;
-    }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
 
-    header li {
-        float: right;
-        display: inline;
-        padding: 0 20px 0 20px;
-    }
+        header li {
+            float: right;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
 
-    header #branding {
-        float: left;
-    }
+        header #branding {
+            float: left;
+        }
 
-    header #branding h1 {
-        margin: 0;
-    }
+        header #branding h1 {
+            margin: 0;
+        }
 
-    section {
-        padding: 20px;
-        margin: 20px 0;
-        background: #ffffff;
-        border-radius: 8px;
-    }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background: #ffffff;
+            border-radius: 8px;
+        }
 
-    footer {
-        background: orangered;
-        color: #ffffff;
-        text-align: center;
-        padding: 10px;
-        margin-top: 20px;
-    }
+        footer {
+            background: orangered;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
 
-    .form-group {
-        margin-bottom: 15px;
-    }
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-    }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-    .form-group button {
-        background: orangered;
-        color: #fff;
-        border: 0;
-        padding: 10px 15px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
+        .form-group button {
+            background: orangered;
+            color: #fff;
+            border: 0;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -120,10 +120,6 @@
             </div>
         </form>
     </section>
-
-    <footer>
-        <p>Bengkel Motor Jaya, &copy; 2024</p>
-    </footer>
 </body>
 
 </html>

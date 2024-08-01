@@ -36,7 +36,7 @@
             </div>
             <div class="col-lg-7">
                 <h6 class="text-primary text-uppercase font-weight-bold">Tentang Kami</h6>
-                <h1 class="mb-4">Sejarah</h1>
+                <h1 class="mb-4">History</h1>
                 <p class="mb-4">Honda didirikan oleh Soichiro Honda pada tahun 1948 di Jepang. Awalnya perusahaan ini
                     memproduksi motor guncangan sepeda. Pada tahun 1959, Honda memproduksi mobil kecil pertama mereka,
                     Honda S500. Honda berhasil memperluas kehadirannya secara global pada tahun 1960-an, terutama di

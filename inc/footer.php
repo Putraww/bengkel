@@ -5,10 +5,15 @@
                 <div class="col-md-6 mb-5">
                     <h3 class="text-primary mb-4">Quick Links</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white mb-2" href="?pg=home"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                        <a class="text-white mb-2" href="?pg=about"><i class="fa fa-angle-right mr-2"></i>About</a>
-                        <a class="text-white mb-2" href="?pg=service"><i class="fa fa-angle-right mr-2"></i>Service</a>
-                        <a class="text-white" href="?pg=contact"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                        <a href="?pg=home" class="nav-item nav-link"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a href="?pg=about" class="nav-item nav-link"><i class="fa fa-angle-right mr-2"></i>
+                            About Us</a>
+                        <a href="?pg=reservasi" class="nav-item nav-link"><i class="fa fa-angle-right mr-2"></i>
+                            Reservasi</a>
+                        <a href="?pg=testimoni" class="nav-item nav-link"><i
+                                class="fa fa-angle-right mr-2"></i>Testimoni</a>
+                        <a href="?pg=contact" class="nav-item nav-link"><i
+                                class="fa fa-angle-right mr-2"></i>Contact</a>
                     </div>
                 </div>
             </div>
