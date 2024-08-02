@@ -9,6 +9,7 @@ if (isset($_POST['simpan'])) {
     $no_telpon = $_POST['no_telpon'];
     $jenismotor = $_POST['jenismotor'];
 
+
     if (mysqli_num_rows($queryReservasi) > 0) {
         $id = mysqli_insert_id($koneksi);
         $update = mysqli_query($koneksi, "UPDATE reservasi SET email = '$email', nama = '$nama', tanggal = '$tanggal', pesan = '$pesan', no_telpon = '$no_telpon', jenismotor = '$jenismotor' WHERE id = '$id'");
