@@ -1,3 +1,9 @@
+<?php
+$queryContact = mysqli_query($koneksi, "SELECT * FROM contact LIMIT 5");
+$rowContact = mysqli_fetch_assoc($queryContact);
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -104,16 +110,16 @@
         <h2 align="center">Kontak Kami</h2>
         <form>
             <div class="form-group">
-                <label for="name">Nama</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">Nama Lengkap</label>
+                <input value="<?= $rowContact['nama_lengkap'] ?>" type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input value="<?= $rowContact['email'] ?>" type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="message">Pesan</label>
-                <textarea id="message" name="message" rows="8" required></textarea>
+                <label for="pesan">Pesan</label>
+                <textarea value="<?= $rowContact['pesan'] ?>" id="pesan" name="pesan" rows="8" required></textarea>
             </div>
             <div class="form-group">
                 <button type="submit">Kirim</button>

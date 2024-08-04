@@ -13,8 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -77,7 +76,7 @@
                 </div>
                 <div class="col-lg-7">
                     <h6 class="text-primary text-uppercase font-weight-bold">Tentang Kami</h6>
-                    <h1 class="mb-4">Sejarah</h1>
+                    <h1 class="mb-4">History</h1>
                     <p class="mb-4">Honda didirikan oleh Soichiro Honda pada tahun 1948 di Jepang. Awalnya perusahaan
                         ini
                         memproduksi motor guncangan sepeda. Pada tahun 1959, Honda memproduksi mobil kecil pertama
