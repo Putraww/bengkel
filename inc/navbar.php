@@ -1,16 +1,3 @@
-<?php
-include 'admin/function/get_data.php';
-// penggunaan petik 1 dan 2
-// ('') untuk mencetak parameter id
-// ("") untuk mencetak parameter id tpi angka di database
-$id_member = isset($_SESSION['id_member']) ? $_SESSION['id_member'] : '';
-$query = mysqli_query($koneksi, "SELECT * FROM member WHERE id = '$id_member'");
-$data = mysqli_fetch_assoc($query);
-
-
-// print_r($id_member);
-// die;
-?>
 <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.php" class="navbar-brand ml-lg-3">

@@ -1,6 +1,17 @@
 <?php
-$queryContact = mysqli_query($koneksi, "SELECT * FROM contact LIMIT 5");
-$rowContact = mysqli_fetch_assoc($queryContact);
+if (isset($_POST['simpan'])) {
+    $nama_lengkap = $_POST['nama_lengkap'];
+    $email = $_POST['email'];
+    $pesan = $_POST['pesan'];
+
+
+    $insert = mysqli_query($koneksi, "INSERT INTO comment (nama_lengkap, email, pesan) VALUES ('$nama_lengkap','$email','$pesan')");
+    if (!$insert) {
+        header("location:?pg=contact&pesan=pesan-gagal-terkirim");
+    } else {
+        header("location:?pg=contact&pesan=pesan-terkirim");
+    }
+}
 
 ?>
 
@@ -10,7 +21,7 @@ $rowContact = mysqli_fetch_assoc($queryContact);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak Kami</title>
+    <title>Contact</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -103,29 +114,31 @@ $rowContact = mysqli_fetch_assoc($queryContact);
 </head>
 
 <body>
+    <div class="py-5">
+        <section class="container py-5">
+            <h2 align="center">Kontak Kami</h2>
 
+            <form action="" method="post">
+                <div class="form-group mb-3">
+                    <label for="">Nama Lengkap</label>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap Anda"
+                        name="nama_lengkap">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" placeholder="Masukkan Email Anda" name="email">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="">pesan</label>
+                    <input type="pesan" class="form-control" placeholder="Masukkan pesan Anda" name="pesan">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="submit" class="btn btn-primary" value="Simpan" name="simpan">
+                </div>
+            </form>
+        </section>
+    </div>
 
-
-    <section class="container">
-        <h2 align="center">Kontak Kami</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input value="<?= $rowContact['nama_lengkap'] ?>" type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input value="<?= $rowContact['email'] ?>" type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="pesan">Pesan</label>
-                <textarea value="<?= $rowContact['pesan'] ?>" id="pesan" name="pesan" rows="8" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">Kirim</button>
-            </div>
-        </form>
-    </section>
 </body>
 
 </html>

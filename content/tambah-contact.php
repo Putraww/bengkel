@@ -24,18 +24,22 @@ if (isset($_POST['edit'])) {
 <form action="" method="post">
     <div class="mb-3">
         <label for="">Nama Lengkap</label>
-        <input value="<?php echo isset($_GET['edit']) ? $rowEdit['nama_lengkap'] : '' ?>" type="text" class="form-control" name="nama_lengkap" placeholder="Masukkan Nama_Lengkap">
+        <input value="<?php echo isset($_GET['edit']) ? $rowEdit['nama_lengkap'] : '' ?>" type="text"
+            class="form-control" name="nama_lengkap" placeholder="Masukkan Nama Lengkap">
     </div>
     <div class="mb-3">
-        <label for="">email</label>
-        <textarea type="text" class="form-control" name="email" placeholder="Masukkan Email"><?php echo isset($_GET['edit']) ? $rowEdit['email'] : '' ?></textarea>
+        <label for="">Email</label>
+        <textarea type="text" class="form-control" name="email"
+            placeholder="Masukkan Email"><?php echo isset($_GET['edit']) ? $rowEdit['email'] : '' ?></textarea>
     </div>
     <div class="mb-3">
         <label for="">Pesan</label>
-        <textarea type="text" class="form-control" name="pesan" placeholder="Masukkan Pesan"><?php echo isset($_GET['edit']) ? $rowEdit['pesan'] : '' ?></textarea>
+        <textarea type="text" class="form-control" name="pesan"
+            placeholder="Masukkan Pesan"><?php echo isset($_GET['edit']) ? $rowEdit['pesan'] : '' ?></textarea>
     </div>
     <div class="mb-3">
-        <input type="submit" name="<?php echo isset($_GET['edit']) ? 'edit' : 'simpan' ?>" value="Simpan" class="btn btn-primary">
+        <input type="submit" name="<?php echo isset($_GET['edit']) ? 'edit' : 'simpan' ?>" value="Simpan"
+            class="btn btn-primary">
         <a href="?pg=contact">Kembali</a>
     </div>
 </form>

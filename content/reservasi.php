@@ -1,5 +1,5 @@
 <?php
-include "koneksi/koneksi.php";
+include "admin/koneksi/koneksi.php";
 $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DESC");
 if (isset($_POST['simpan'])) {
     $email = $_POST['email'];

@@ -24,24 +24,8 @@
     style="border-color: #3E3E4E !important;">
     <div class="row">
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white">&copy; <a href="#">Andriyan</a>. All Rights Reserved.</p>
-            <p>Bengkel Motor Jaya, &copy; 2024</p>
-        </div>
-        <div class="col-lg-6 text-center text-md-right">
-            <ul class="nav d-inline-flex">
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Privacy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Terms</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">FAQs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Help</a>
-                </li>
-            </ul>
+            <p class="m-0 text-white">&copy; <a href="#">Andriyan </a>All Rights Reserved.</p>
+            <p>Bengkel Motor Honda , &copy; 2024</p>
         </div>
     </div>
 </div>

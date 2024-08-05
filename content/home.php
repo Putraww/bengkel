@@ -1,3 +1,14 @@
+<?php
+include "admin/koneksi/koneksi.php";
+if (isset($_POST['simpan'])) {
+    $nama_lengkap = $_POST['nama_lengkap'];
+    $email = $_POST['email'];
+    $pesan = $_POST['pesan'];
+    $insert = mysqli_query($koneksi, "INSERT INTO contact (nama_lengkap,email,pesan) VALUES ('$nama_lengkap', '$email', '$pesan')");
+    header("location:?pg=contact&insert=berhasil");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +24,8 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -93,132 +105,20 @@
         </div>
     </div>
     <!-- About End -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        header {
-            background: #50b3a2;
-            color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
-        }
-
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        header li {
-            float: right;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-
-        header #branding {
-            float: left;
-        }
-
-        header #branding h1 {
-            margin: 0;
-        }
-
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            background: #ffffff;
-            border-radius: 8px;
-        }
-
-        footer {
-            background: orangered;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .form-group button {
-            background: orangered;
-            color: #fff;
-            border: 0;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <body>
-        <section class="container">
-            <h2 align="center">Kontak Kami</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Nama</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Pesan</label>
-                    <textarea id="message" name="message" rows="8" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Kirim</button>
-                </div>
-            </form>
-        </section>
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/lib/easing/easing.min.js"></script>
+    <script src="asset/lib/waypoints/waypoints.min.js"></script>
+    <script src="asset/lib/counterup/counterup.min.js"></script>
+    <script src="asset/lib/owlcarousel/owl.carousel.min.js"></script>
 
-
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="asset/lib/easing/easing.min.js"></script>
-        <script src="asset/lib/waypoints/waypoints.min.js"></script>
-        <script src="asset/lib/counterup/counterup.min.js"></script>
-        <script src="asset/lib/owlcarousel/owl.carousel.min.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="asset/js/main.js"></script>
-    </body>
+    <!-- Template Javascript -->
+    <script src="asset/js/main.js"></script>
+</body>
 
 </html>

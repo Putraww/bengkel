@@ -1,4 +1,5 @@
 <?php
+include "admin/koneksi/koneksi.php";
 $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id");
 $rowReservasi = mysqli_fetch_assoc($queryReservasi);
 ?>
@@ -19,8 +20,8 @@ $rowReservasi = mysqli_fetch_assoc($queryReservasi);
             </div>
             <div class="mb-3">
                 <label for="jenismotor">Seri Motor:</label>
-                <select value="<?= $rowReservasi['jenismotor'] ?>" id="jenismotor" name="jenismotor" required>
-                    <option value="">Pilih Seri Motor</option>
+                <select value="" id="jenismotor" name="jenismotor" required>
+                    <option value="<?= $rowReservasi['jenismotor'] ?>">Pilih Seri Motor</option>
                     <option value="Honda Beat">Honda Beat</option>
                     <option value="Honda Vario">Honda Vario</option>
                     <option value="Honda Scoopy">Honda Scoopy</option>
