@@ -3,6 +3,8 @@ include "admin/koneksi/koneksi.php";
 ob_start();
 session_start();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,32 +33,7 @@ session_start();
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark">
-        <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+62 8912-3221-0989</small>
-                    <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>bengkelmotorhonda@gmail.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+
 
 
     <!-- Navbar Start -->
@@ -86,7 +63,7 @@ session_start();
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <a href="#" class="btn btn-lg back-to-top bg-dark"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

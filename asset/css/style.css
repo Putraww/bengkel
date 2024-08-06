@@ -172,7 +172,6 @@ a {
 }
 
 a:hover {
-  color: #b33200;
   text-decoration: underline;
 }
 
@@ -4361,6 +4360,10 @@ input[type="button"].btn-block {
   padding: 0.5rem 1rem;
 }
 
+.nav-link:hover {
+  background-color: #f0f0f0;
+}
+
 .nav-link:hover,
 .nav-link:focus {
   text-decoration: none;
@@ -4404,12 +4407,13 @@ input[type="button"].btn-block {
 
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
+  background-color: #0c5460;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
   color: #fff;
-  background-color: #FF4800;
+
 }
 
 .nav-fill>.nav-link,
@@ -4440,6 +4444,7 @@ input[type="button"].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+
 
 }
 
@@ -4567,6 +4572,7 @@ input[type="button"].btn-block {
   .navbar-expand-sm .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
+
   }
 
   .navbar-expand-sm .navbar-toggler {
@@ -10710,10 +10716,11 @@ p,
   outline: none;
 }
 
+/* untuk bagian background navbar */
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #FFFFFF;
-  background: #FF4800;
+  background-color: whitesmoke;
+
 }
 
 @media (max-width: 991.98px) {
@@ -10723,7 +10730,7 @@ p,
 }
 
 .jumbotron {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/bengkel.jpg);
+  background: url(../img/on.webp);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;

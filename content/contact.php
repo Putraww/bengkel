@@ -3,9 +3,11 @@ if (isset($_POST['simpan'])) {
     $nama_lengkap = $_POST['nama_lengkap'];
     $email = $_POST['email'];
     $pesan = $_POST['pesan'];
+    $no_telpon = $_POST['no_telpon'];
+    $alamat = $_POST['alamat'];
 
 
-    $insert = mysqli_query($koneksi, "INSERT INTO comment (nama_lengkap, email, pesan) VALUES ('$nama_lengkap','$email','$pesan')");
+    $insert = mysqli_query($koneksi, "INSERT INTO comment (nama_lengkap, email, pesan, no_telpon, alamat) VALUES ('$nama_lengkap','$email','$pesan','$no_telpon','$alamat')");
     if (!$insert) {
         header("location:?pg=contact&pesan=pesan-gagal-terkirim");
     } else {
@@ -116,7 +118,7 @@ if (isset($_POST['simpan'])) {
 <body>
     <div class="py-5">
         <section class="container py-5">
-            <h2 align="center">Kontak Kami</h2>
+            <h2 align="center">SARAN DAN KELUHAN</h2>
 
             <form action="" method="post">
                 <div class="form-group mb-3">
@@ -129,8 +131,16 @@ if (isset($_POST['simpan'])) {
                     <input type="email" class="form-control" placeholder="Masukkan Email Anda" name="email">
                 </div>
                 <div class="form-group mb-3">
-                    <label for="">pesan</label>
-                    <input type="pesan" class="form-control" placeholder="Masukkan pesan Anda" name="pesan">
+                    <label for="">No Telpon</label>
+                    <input type="no_telpon" class="form-control" placeholder="08XXXXXXXXXX" name="no_telpon">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="">Alamat</label>
+                    <input type="alamat" class="form-control" placeholder="Masukkan Alamat Anda" name="alamat">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="">Tulis Pesan</label>
+                    <input type="pesan" class="form-control" placeholder="Tulis Pesan Anda" name="pesan">
                 </div>
                 <div class="form-group mb-3">
                     <input type="submit" class="btn btn-primary" value="Simpan" name="simpan">

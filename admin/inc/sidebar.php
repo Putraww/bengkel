@@ -35,10 +35,8 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="?pg=contact">Contact</a>
-                <a class="collapse-item" href="?pg=reservasi">Reservasi</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                <a class="collapse-item" href="utilities-other.html">Other</a>
+                <a class="collapse-item" href="?pg=comment">Comment</a>
+                <a class="collapse-item" href="?pg=user">User</a>
             </div>
         </div>
     </li>

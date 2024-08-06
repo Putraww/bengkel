@@ -1,12 +1,6 @@
 <?php
 include "admin/koneksi/koneksi.php";
-if (isset($_POST['simpan'])) {
-    $nama_lengkap = $_POST['nama_lengkap'];
-    $email = $_POST['email'];
-    $pesan = $_POST['pesan'];
-    $insert = mysqli_query($koneksi, "INSERT INTO contact (nama_lengkap,email,pesan) VALUES ('$nama_lengkap', '$email', '$pesan')");
-    header("location:?pg=contact&insert=berhasil");
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -40,9 +34,7 @@ if (isset($_POST['simpan'])) {
 <body>
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid mb-5">
-        <div class="container text-center py-5">
-            <h1 class="text-primary mb-4">Safe & Faster</h1>
-            <h1 class="text-white display-3 mb-5">Bengkel Motor Honda</h1>
+        <div class="container text-center py-5"><br><br><br><br><br><br><br><br><br><br>
             <div class="mx-auto" style="width: 100%; max-width: 600px;"></div>
         </div>
     </div>
@@ -54,25 +46,21 @@ if (isset($_POST['simpan'])) {
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 pb-4 pb-lg-0">
-                    <img class="img-fluid w-100" src="asset/img/servis.jpg" alt="">
+                    <img class="img-fluid w-100" src="asset/img/honda1.jpg" alt="">
                     <div class="bg-primary text-dark text-center p-4">
                         <h3 class="m-0">Bengkel Motor Honda</h3>
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <h6 class="text-primary text-uppercase font-weight-bold">Tentang Kami</h6>
-                    <h1 class="mb-4">Trusted & Faster Service</h1>
-                    <p class="mb-4">Sepeda motor kini bukan hanya menjadi sarana transportasi produktif bagi masyarakat
-                        Indonesia. Sepeda motor sudah
-                        menjadi bagian dari hobi dan gaya hidup, bahkan bisa mengantarkan pada prestasi tertentu yang
-                        membanggakan. Untuk
-                        menemani masyarakat beraktivitas dan menggapai beragam mimpinya, Bengkel Motor Honda
-                        menghadirkan solusi mobilitas bagi
-                        masyarakat dengan produk dan layanan terbaik. Sejak pertama kali hadir di Indonesia, sepeda
-                        motor selalu dicintai
-                        dan dipercaya menjadi partner berkendara masyarakat. Berbekal kepercayaan ini, Bengkel Motor
-                        Honda konsisten
-                        melakukan inovasi pada produk dan teknologinya.</p>
+                    <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
+                    <h1 class="mb-4">Profesional dan Berpengalaman.</h1>
+                    <p class="mb-4">Selamat datang di Bengkel Motor Honda, bengkel motor terpercaya dengan pengalaman
+                        lebih
+                        dari 10 tahun di industri otomotif. Kami berkomitmen untuk memberikan layanan perawatan dan
+                        perbaikan motor yang terbaik dengan didukung oleh teknisi berpengalaman dan peralatan modern. Di
+                        Bengkel Motor Honda, kepuasan pelanggan adalah prioritas utama kami, dan kami memastikan setiap
+                        kendaraan mendapatkan perhatian dan perawatan yang layak. Terima kasih telah mempercayakan motor
+                        Anda kepada kami.</p>
                 </div>
             </div>
         </div>
@@ -87,8 +75,8 @@ if (isset($_POST['simpan'])) {
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <h6 class="text-primary text-uppercase font-weight-bold">Tentang Kami</h6>
-                    <h1 class="mb-4">History</h1>
+                    <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
+                    <h1 class="mb-4">Sejarah</h1>
                     <p class="mb-4">Honda didirikan oleh Soichiro Honda pada tahun 1948 di Jepang. Awalnya perusahaan
                         ini
                         memproduksi motor guncangan sepeda. Pada tahun 1959, Honda memproduksi mobil kecil pertama
@@ -100,6 +88,81 @@ if (isset($_POST['simpan'])) {
                         teknologi
                         energi alternatif. Perusahaan terus berkomitmen pada inovasi dan keberlanjutan dalam industri
                         otomotif global.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 pb-4 pb-lg-0">
+                    <img class="img-fluid w-100" src="asset/img/honda2.jpg" alt="">
+                    <div class="bg-primary text-dark text-center p-4">
+                        <h3 class="m-0">Bengkel Motor Honda</h3>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
+                    <h1 class="mb-4">Inovatif dan Berfokus pada Teknologi</h1>
+                    <p class="mb-4">Bengkel motor honda modern yang menggabungkan teknologi terbaru dengan keahlian
+                        tinggi
+                        untuk
+                        memberikan layanan yang cepat dan efisien. Kami menggunakan peralatan canggih dan teknik terbaru
+                        dalam perawatan dan perbaikan motor. Tim teknisi kami terlatih untuk menangani berbagai jenis
+                        kendaraan dan masalah teknis dengan solusi yang inovatif. Jika Anda mencari bengkel motor yang
+                        mengikuti perkembangan teknologi dan tetap berkomitmen pada kualitas, [Nama Perusahaan] adalah
+                        pilihan yang tepat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 pb-4 pb-lg-0">
+                    <img class="img-fluid w-100" src="asset/img/honda3.jpg" alt="">
+                    <div class="bg-primary text-dark text-center p-4">
+                        <h3 class="m-0">Bengkel Motor Honda</h3>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
+                    <h1 class="mb-4">Peduli Lingkungan</h1>
+                    <p class="mb-4">Di Bengkel Motor Honda, kami percaya bahwa perawatan motor tidak hanya tentang
+                        performa,
+                        tetapi juga tentang tanggung jawab lingkungan. Kami berkomitmen untuk mengurangi dampak ekologis
+                        dari setiap layanan yang kami berikan dengan menggunakan produk ramah lingkungan dan praktik
+                        kerja
+                        yang berkelanjutan. Bergabunglah dengan kami dalam upaya menjaga planet ini sambil memastikan
+                        motor
+                        Anda tetap dalam kondisi terbaik. Di Bengkel Motor Honda, Anda mendapatkan layanan berkualitas
+                        dengan
+                        sentuhan peduli terhadap lingkungan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 pb-4 pb-lg-0">
+                    <img class="img-fluid w-100" src="asset/img/honda.jpg" alt="">
+                    <div class="bg-primary text-dark text-center p-4">
+                        <h3 class="m-0">Bengkel Motor Honda</h3>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
+                    <h1 class="mb-4">Fokus pada Layanan Pelanggan</h1>
+                    <p class="mb-4">Bengkel Motor Honda didirikan dengan satu tujuan utama: memberikan layanan bengkel
+                        motor
+                        yang luar biasa dan memuaskan. Kami memahami betapa pentingnya kendaraan Anda dalam kehidupan
+                        sehari-hari, dan kami berkomitmen untuk menawarkan perawatan yang cepat, akurat, dan ramah.
+                        Dengan
+                        tim yang terampil dan perhatian khusus pada detail, kami berusaha keras untuk memenuhi dan
+                        melampaui
+                        harapan Anda. Terima kasih telah memilih Bengkel Motor Honda sebagai mitra perawatan motor Anda.
+                    </p>
                 </div>
             </div>
         </div>
