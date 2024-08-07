@@ -62,8 +62,6 @@ session_start();
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg back-to-top bg-dark"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

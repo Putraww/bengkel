@@ -3,12 +3,12 @@
         <div class="row align-items-center">
             <div class="col-lg-4 pb-4 pb-lg-0">
                 <img class="img-fluid w-100" src="asset/img/honda1.jpg" alt="">
-                <div class="bg-primary text-dark text-center p-4">
+                <div class="bg-danger text-dark text-center p-4">
                     <h3 class="m-0">Bengkel Motor Honda</h3>
                 </div>
             </div>
             <div class="col-lg-7">
-                <h6 class="text-primary text-uppercase font-weight-bold">About Us</h6>
+                <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
                 <h1 class="mb-4">Profesional dan Berpengalaman.</h1>
                 <p class="mb-4">Selamat datang di Bengkel Motor Honda, bengkel motor terpercaya dengan pengalaman lebih
                     dari 10 tahun di industri otomotif. Kami berkomitmen untuk memberikan layanan perawatan dan
@@ -25,12 +25,12 @@
         <div class="row align-items-center">
             <div class="col-lg-4 pb-4 pb-lg-0">
                 <img class="img-fluid w-100" src="asset/img/hon.jpg" alt="">
-                <div class="bg-primary text-dark text-center p-4">
+                <div class="bg-danger text-dark text-center p-4">
                     <h3 class="m-0">Bengkel Motor Honda</h3>
                 </div>
             </div>
             <div class="col-lg-7">
-                <h6 class="text-primary text-uppercase font-weight-bold">About Us</h6>
+                <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
                 <h1 class="mb-4">Sejarah</h1>
                 <p class="mb-4">Honda didirikan oleh Soichiro Honda pada tahun 1948 di Jepang. Awalnya perusahaan ini
                     memproduksi motor guncangan sepeda. Pada tahun 1959, Honda memproduksi mobil kecil pertama mereka,
@@ -48,12 +48,12 @@
         <div class="row align-items-center">
             <div class="col-lg-4 pb-4 pb-lg-0">
                 <img class="img-fluid w-100" src="asset/img/honda2.jpg" alt="">
-                <div class="bg-primary text-dark text-center p-4">
+                <div class="bg-danger text-dark text-center p-4">
                     <h3 class="m-0">Bengkel Motor Honda</h3>
                 </div>
             </div>
             <div class="col-lg-7">
-                <h6 class="text-primary text-uppercase font-weight-bold">About Us</h6>
+                <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
                 <h1 class="mb-4">Inovatif dan Berfokus pada Teknologi</h1>
                 <p class="mb-4">Bengkel motor honda modern yang menggabungkan teknologi terbaru dengan keahlian tinggi
                     untuk
@@ -71,12 +71,12 @@
         <div class="row align-items-center">
             <div class="col-lg-4 pb-4 pb-lg-0">
                 <img class="img-fluid w-100" src="asset/img/honda3.jpg" alt="">
-                <div class="bg-primary text-dark text-center p-4">
+                <div class="bg-danger text-dark text-center p-4">
                     <h3 class="m-0">Bengkel Motor Honda</h3>
                 </div>
             </div>
             <div class="col-lg-7">
-                <h6 class="text-primary text-uppercase font-weight-bold">About Us</h6>
+                <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
                 <h1 class="mb-4">Peduli Lingkungan</h1>
                 <p class="mb-4">Di Bengkel Motor Honda, kami percaya bahwa perawatan motor tidak hanya tentang performa,
                     tetapi juga tentang tanggung jawab lingkungan. Kami berkomitmen untuk mengurangi dampak ekologis
@@ -94,12 +94,12 @@
         <div class="row align-items-center">
             <div class="col-lg-4 pb-4 pb-lg-0">
                 <img class="img-fluid w-100" src="asset/img/honda.jpg" alt="">
-                <div class="bg-primary text-dark text-center p-4">
+                <div class="bg-danger text-dark text-center p-4">
                     <h3 class="m-0">Bengkel Motor Honda</h3>
                 </div>
             </div>
             <div class="col-lg-7">
-                <h6 class="text-primary text-uppercase font-weight-bold">About Us</h6>
+                <h6 class="text-danger text-uppercase font-weight-bold">About Us</h6>
                 <h1 class="mb-4">Fokus pada Layanan Pelanggan</h1>
                 <p class="mb-4">Bengkel Motor Honda didirikan dengan satu tujuan utama: memberikan layanan bengkel motor
                     yang luar biasa dan memuaskan. Kami memahami betapa pentingnya kendaraan Anda dalam kehidupan

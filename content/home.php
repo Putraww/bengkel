@@ -169,7 +169,7 @@ include "admin/koneksi/koneksi.php";
     </div>
     <!-- About End -->
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
 
 
     <!-- JavaScript Libraries -->
