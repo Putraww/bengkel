@@ -47,7 +47,7 @@ include "admin/koneksi/koneksi.php";
             <div class="row align-items-center">
                 <div class="col-lg-4 pb-4 pb-lg-0">
                     <img class="img-fluid w-100" src="asset/img/honda1.jpg" alt="">
-                    <div class="bg-primary text-dark text-center p-4">
+                    <div class="bg-danger text-dark text-center p-4">
                         <h3 class="m-0">Bengkel Motor Honda</h3>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ include "admin/koneksi/koneksi.php";
             <div class="row align-items-center">
                 <div class="col-lg-4 pb-4 pb-lg-0">
                     <img class="img-fluid w-100" src="asset/img/hon.jpg" alt="">
-                    <div class="bg-primary text-dark text-center p-4">
+                    <div class="bg-danger text-dark text-center p-4">
                         <h3 class="m-0">Bengkel Motor Honda</h3>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ include "admin/koneksi/koneksi.php";
             <div class="row align-items-center">
                 <div class="col-lg-4 pb-4 pb-lg-0">
                     <img class="img-fluid w-100" src="asset/img/honda2.jpg" alt="">
-                    <div class="bg-primary text-dark text-center p-4">
+                    <div class="bg-danger text-dark text-center p-4">
                         <h3 class="m-0">Bengkel Motor Honda</h3>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ include "admin/koneksi/koneksi.php";
             <div class="row align-items-center">
                 <div class="col-lg-4 pb-4 pb-lg-0">
                     <img class="img-fluid w-100" src="asset/img/honda3.jpg" alt="">
-                    <div class="bg-primary text-dark text-center p-4">
+                    <div class="bg-danger text-dark text-center p-4">
                         <h3 class="m-0">Bengkel Motor Honda</h3>
                     </div>
                 </div>
@@ -147,7 +147,7 @@ include "admin/koneksi/koneksi.php";
             <div class="row align-items-center">
                 <div class="col-lg-4 pb-4 pb-lg-0">
                     <img class="img-fluid w-100" src="asset/img/honda.jpg" alt="">
-                    <div class="bg-primary text-dark text-center p-4">
+                    <div class="bg-danger text-dark text-center p-4">
                         <h3 class="m-0">Bengkel Motor Honda</h3>
                     </div>
                 </div>

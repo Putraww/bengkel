@@ -30,6 +30,7 @@ session_start();
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="asset/css/style.css" rel="stylesheet">
+    <link href="asset/css/res.css" rel="stylesheet">
 </head>
 
 <body>

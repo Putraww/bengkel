@@ -36,7 +36,7 @@
             <div class="navbar-nav m-auto py-0 ">
                 <a href="?pg=home" class="nav-item nav-link text-dark">Home</a>
                 <a href="?pg=about" class="nav-item nav-link text-dark">About Us</a>
-                <a href="login.php" class="nav-item nav-link text-dark">Reservasi</a>
+                <a href="?pg=reservasi" class="nav-item nav-link text-dark">Reservasi</a>
                 <a href="?pg=testimoni" class="nav-item nav-link text-dark">Testimoni</a>
                 <a href="?pg=contact" class="nav-item nav-link text-dark">Contact</a>
                 <a href="login.php" class="nav-item nav-link">
