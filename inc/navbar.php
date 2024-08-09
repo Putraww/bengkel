@@ -38,7 +38,7 @@
                 <a href="?pg=about" class="nav-item nav-link text-dark">About Us</a>
                 <a href="?pg=reservasi" class="nav-item nav-link text-dark">Reservasi</a>
                 <a href="?pg=testimoni" class="nav-item nav-link text-dark">Testimoni</a>
-                <a href="?pg=contact" class="nav-item nav-link text-dark">Contact</a>
+                <a href="?pg=saran" class="nav-item nav-link text-dark">Saran Dan Keluhan</a>
                 <a href="login.php" class="nav-item nav-link">
                     <img src="asset/img/file-person.svg" width="30px">
                 </a>

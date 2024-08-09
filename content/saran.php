@@ -9,9 +9,9 @@ if (isset($_POST['simpan'])) {
 
     $insert = mysqli_query($koneksi, "INSERT INTO comment (nama_lengkap, email, pesan, no_telpon, alamat) VALUES ('$nama_lengkap','$email','$pesan','$no_telpon','$alamat')");
     if (!$insert) {
-        header("location:?pg=contact&pesan=pesan-gagal-terkirim");
+        header("location:?pg=home&pesan=pesan-gagal-terkirim");
     } else {
-        header("location:?pg=contact&pesan=pesan-terkirim");
+        header("location:?pg=saran&pesan=pesan-terkirim");
     }
 }
 
@@ -23,7 +23,7 @@ if (isset($_POST['simpan'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Saran Dan Keluhan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -143,7 +143,7 @@ if (isset($_POST['simpan'])) {
                     <input type="pesan" class="form-control" placeholder="Tulis Pesan Anda" name="pesan">
                 </div>
                 <div class="form-group mb-3">
-                    <input type="submit" class="btn btn-primary" value="Simpan" name="simpan">
+                    <input type="submit" style="background-color: red" value="Simpan" name="simpan">
                 </div>
             </form>
         </section>
