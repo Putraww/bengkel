@@ -30,7 +30,6 @@ if (isset($_POST['simpan'])) {
     $insert = mysqli_query($koneksi, "INSERT INTO reservasi (nama, id_kendaraan, email, pesan, tanggal, no_telpon) VALUES ('$nama',$id_kendaraan,'$email','$pesan','$tanggal','$no_telpon')");
 
     header("location:?pg=home&pesan=tambah-berhasil");
-
 }
 
 
@@ -40,6 +39,7 @@ if (isset($_POST['simpan'])) {
         <div class="card">
             <div class="card-body">
                 <form action="" method="post">
+                    <h1 align="center" style="color:red">Informasi Data Diri & Booking Service</h1>
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
@@ -74,13 +74,13 @@ if (isset($_POST['simpan'])) {
                                 <select class="form-control" name="id_kendaraan" id="id_kendaraan">
                                     <option value="">Pilih kendaraan</option>
                                     <?php
-                                    while ($row = mysqli_fetch_assoc($queryOpt)):
-                                        ?>
-                                        <option value="<?= $row['id'] ?>">Jenis kendaraan :
-                                            <?= $row['nama_kendaraan'] ?> |
-                                            Harga :
-                                            <?= $row['harga'] ?>
-                                        </option>
+                                    while ($row = mysqli_fetch_assoc($queryOpt)) :
+                                    ?>
+                                    <option value="<?= $row['id'] ?>">Jenis kendaraan :
+                                        <?= $row['nama_kendaraan'] ?> |
+                                        Harga :
+                                        <?= $row['harga'] ?>
+                                    </option>
                                     <?php endwhile; ?>
                                 </select>
                             </div>
@@ -97,7 +97,7 @@ if (isset($_POST['simpan'])) {
 
                             <div class="form-group">
                                 <label for="description">Deskripsi Masalah Motor :</label>
-                                <textarea id="description" name="description" rows="4" required
+                                <textarea id="description" name="description" rows="1" required
                                     class="form-control"></textarea>
                             </div>
                         </div>
