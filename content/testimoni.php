@@ -1,7 +1,7 @@
 <div class="container-fluid py-5">
     <div class="container">
         <div class="text-center pb-2">
-            <h6 class="text-primary text-uppercase font-weight-bold">Testimonial</h6>
+            <h6 class="text-dark text-uppercase font-weight-bold">Testimonial</h6>
             <h1 class="mb-4">Our Clients Say</h1>
         </div>
         <div class="owl-carousel testimonial-carousel">

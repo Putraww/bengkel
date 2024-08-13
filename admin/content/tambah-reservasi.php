@@ -1,14 +1,18 @@
 <?php
 if (isset($_POST['simpan'])) {
-    $nama_lengkap = $_POST['nama_lengkap'];
+    $nama = $_POST['nama'];
     $email = $_POST['email'];
-    $password = sha1($_POST['password']);
-    $id_level = $_POST['id_level'];
+    $alamat = $_POST['alamat'];
+    $no_telpon = $_POST['no_telpon'];
+    $email = $_POST['email'];
+    $email = $_POST['email'];
+    $email = $_POST['email'];
+    $id_kendaraan = $_POST['id_kendaraan'];
 
     //MASUKKAN KE DALAM TABEL USER (FIELD YANG AKAN DI MASUKKAN)
     //VALUE (INPUTAN MASING-MASING KOLOM)
 
-    $insert = mysqli_query($koneksi, "INSERT INTO user (nama_lengkap, id_level, email, password) VALUES ('$nama_lengkap',$id_level,'$email','$password')");
+    $insert = mysqli_query($koneksi, "INSERT INTO user (nama, id_level, email, password) VALUES ('$nama',$id_level,'$email','$password')");
     if (!$insert) {
         header("location:?pg=tambah-user&pesan=tambah-gagal");
     } else {
@@ -25,7 +29,7 @@ if (isset($_GET['edit'])) {
 }
 
 if (isset($_POST['edit'])) {
-    $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
+    $nama = htmlspecialchars($_POST['nama']);
     $email = $_POST['email'];
     $password = sha1($_POST['password']);
     $id_level = $_POST['id_level'];
@@ -33,7 +37,7 @@ if (isset($_POST['edit'])) {
     $id = $_GET['edit'];
 
     $update = mysqli_query($koneksi, "UPDATE user SET 
-    nama_lengkap='$nama_lengkap', id_level='$id_level', 
+    nama='$nama', id_level='$id_level', 
     email='$email', password='$password' WHERE id='$id'");
     header("location:?pg=user&update=berhasi");
 }
@@ -44,8 +48,8 @@ if (isset($_POST['edit'])) {
 <form action="" method="post">
     <div class="mb-3">
         <label for="">Nama Lengkap</label>
-        <input value="<?php echo isset($_GET['edit']) ? $rowEdit['nama_lengkap'] : '' ?>" type="text"
-            class="form-control" placeholder="Masukkan Nama Lengkap Anda" name="nama_lengkap">
+        <input value="<?php echo isset($_GET['edit']) ? $rowEdit['nama'] : '' ?>" type="text" class="form-control"
+            placeholder="Masukkan Nama Lengkap Anda" name="nama">
     </div>
     <div class="mb-3">
         <label for="">Email</label>
@@ -67,7 +71,7 @@ if (isset($_POST['edit'])) {
             <?php
             while ($row = mysqli_fetch_assoc($queryOpt)):
                 ?>
-            <option value="<?= $row['id'] ?>"><?= $row['nama_level'] ?></option>
+                <option value="<?= $row['id'] ?>"><?= $row['nama_level'] ?></option>
             <?php endwhile; ?>
         </select>
     </div>

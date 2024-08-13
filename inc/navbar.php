@@ -24,7 +24,7 @@
     </div>
 </div>
 <!-- Topbar End -->
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 ">
     <nav class="navbar navbar-expand-lg bg-white navbar-white py-3 py-lg-0 px-lg-5">
         <a href="index.php" class="navbar-brand ml-lg-3">
             <h1 class="m-0 display-5 text-uppercase ">Bengkel Motor Honda</h1>
@@ -39,10 +39,15 @@
                 <a href="?pg=reservasi" class="nav-item nav-link text-dark">Booking Service</a>
                 <a href="?pg=testimoni" class="nav-item nav-link text-dark">Testimoni</a>
                 <a href="?pg=saran" class="nav-item nav-link text-dark">Saran Dan Keluhan</a>
-                <a href="login.php" class="nav-item nav-link">
-                    <img src="asset/img/file-person.svg" width="30px">
-                </a>
+                <?php if (isset($_SESSION['nama_lengkap'])) { ?>
+                <a class="btn btn-secondary-outline"><?php echo $_SESSION['nama_lengkap']; ?></a><a
+                    class="btn btn-danger ms-3" href="?pg=logout">Logout</a>
+                <?php } else { ?>
+                <a class="btn btn-secondary-outline text-dark nav-link " href="?pg=signin">Sign
+                    In</a><a class="btn btn-secondary-outline text-dark nav-link" href="?pg=signup">Sign Up</a>
             </div>
+            <?php } ?>
         </div>
-    </nav>
+</div>
+</nav>
 </div>

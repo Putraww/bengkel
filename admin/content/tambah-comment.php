@@ -2,9 +2,11 @@
 if (isset($_POST['simpan'])) {
     $nama_lengkap = $_POST['nama_lengkap'];
     $email = $_POST['email'];
+    $alamat = $_POST['alamat'];
+    $no_telpon = $_POST['no_telpon'];
     $pesan = $_POST['pesan'];
 
-    $insert = mysqli_query($koneksi, "INSERT INTO comment (nama_lengkap, email, pesan) VALUES ('$nama_lengkap', '$email', '$pesan')");
+    $insert = mysqli_query($koneksi, "INSERT INTO comment (nama_lengkap, email, pesan, alamat, no_telpon) VALUES ('$nama_lengkap', '$email', '$pesan','$no_telpon','$alamat')");
     header("location:?pg=comment&insert=berhasil");
 }
 if (isset($_GET['edit'])) {
@@ -15,9 +17,11 @@ if (isset($_GET['edit'])) {
 if (isset($_POST['edit'])) {
     $nama_lengkap = $_POST['nama_lengkap'];
     $email = $_POST['email'];
+    $alamat = $_POST['alamat'];
+    $no_telpon = $_POST['no_telpon'];
     $pesan = $_POST['pesan'];
 
-    $update = mysqli_query($koneksi, "UPDATE comment SET nama_lengkap='$nama_lengkap', email='$email' WHERE id='$id'");
+    $update = mysqli_query($koneksi, "UPDATE comment SET nama_lengkap='$nama_lengkap', email='$email', pesan='$pesan', alamat='$alamat', no_telpon='$no_telpon' WHERE id='$id'");
     header("location:?pg=comment&update=berhasil");
     // sebelum where tidak boleh ada tanda koma
 }
@@ -31,11 +35,21 @@ if (isset($_POST['edit'])) {
     </div>
     <div class="mb-3">
         <label for="">Email</label>
-        <textarea type="text" class="form-control" name="email"
-            placeholder="Masukkan email"><?php echo isset($_GET['edit']) ? $rowEdit['email'] : '' ?></textarea>
+        <input value="<?php echo isset($_GET['edit']) ? $rowEdit['email'] : '' ?>" type="text" class="form-control"
+            name="email" placeholder="Masukkan Comment">
     </div>
     <div class="mb-3">
-        <label for="">Pesan</label>
+        <label for="">Alamat</label>
+        <input value="<?php echo isset($_GET['edit']) ? $rowEdit['alamat'] : '' ?>" type="text" class="form-control"
+            name="alamat" placeholder="Masukkan Alamat">
+    </div>
+    <div class="mb-3">
+        <label for="">No Telpon</label>
+        <textarea type="text" class="form-control" name="no_telpon"
+            placeholder="08XXXXXXXXXX"><?php echo isset($_GET['edit']) ? $rowEdit['no_telpon'] : '' ?></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="">Comment</label>
         <textarea type="text" class="form-control" name="pesan"
             placeholder="Masukkan Pesan"><?php echo isset($_GET['edit']) ? $rowEdit['pesan'] : '' ?></textarea>
     </div>

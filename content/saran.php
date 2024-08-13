@@ -118,7 +118,7 @@ if (isset($_POST['simpan'])) {
 <body>
     <div class="py-5">
         <section class="container py-5">
-            <h2 align="center">SARAN DAN KELUHAN</h2>
+            <h2 align="center" style="color:red;">SARAN DAN KELUHAN</h2>
 
             <form action="" method="post">
                 <div class="form-group mb-3">

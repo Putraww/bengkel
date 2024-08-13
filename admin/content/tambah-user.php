@@ -1,9 +1,15 @@
 <?php
+include "koneksi/koneksi.php";
 if (isset($_POST['simpan'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $insert = mysqli_query($koneksi, "INSERT INTO user (username, email) VALUES ('$username', '$email')");
-    header("location:?pg=user&insert=berhasil");
+    $password = sha1($_POST['password']);
+    $insert = mysqli_query($koneksi, "INSERT INTO user (nama_lengkap, email, password) VALUES ('$nama_lengkap','$email','$password')");
+    if (!$insert) {
+        header("location:?pg=tambah-user&pesan=tambah-gagal");
+    } else {
+        header("location:?pg=user&pesan=tambah-berhasil");
+    }
 }
 if (isset($_GET['edit'])) {
     $id = $_GET['edit'];
@@ -13,7 +19,8 @@ if (isset($_GET['edit'])) {
 if (isset($_POST['edit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $update = mysqli_query($koneksi, "UPDATE user SET username='$username', email='$email' WHERE id='$id'");
+    $password = sha1($_POST['password']);
+    $update = mysqli_query($koneksi, "UPDATE user SET username='$username', email='$email', password='$password' WHERE id='$id'");
     header("location:?pg=user&update=berhasil");
     // sebelum where tidak boleh ada tanda koma
 }
@@ -23,12 +30,17 @@ if (isset($_POST['edit'])) {
     <div class="mb-3">
         <label for="">Nama Lengkap</label>
         <input value="<?php echo isset($_GET['edit']) ? $rowEdit['username'] : '' ?>" type="text" class="form-control"
-            name="username" placeholder="Masukkan Nama user">
+            name="username" placeholder="Masukkan Nama Lengkap">
     </div>
     <div class="mb-3">
         <label for="">Email</label>
         <textarea type="text" class="form-control" name="email"
             placeholder="Masukkan email"><?php echo isset($_GET['edit']) ? $rowEdit['email'] : '' ?></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="">Password</label>
+        <textarea type="text" class="form-control" name="pasword"
+            placeholder="Masukkan Password"><?php echo isset($_GET['edit']) ? $rowEdit['password'] : '' ?></textarea>
     </div>
     <div class="mb-3">
         <input type="submit" name="<?php echo isset($_GET['edit']) ? 'edit' : 'simpan' ?>" value="Simpan"

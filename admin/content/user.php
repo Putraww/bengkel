@@ -14,7 +14,7 @@ if (isset($_GET['delete'])) {
     <thead>
         <tr>
             <th>No</th>
-            <th>Nama</th>
+            <th>Nama Lengkap</th>
             <th>Email</th>
             <th>Aksi</th>
         </tr>
@@ -22,15 +22,15 @@ if (isset($_GET['delete'])) {
     <tbody>
         <?php $no = 1;
         while ($row = mysqli_fetch_assoc($querry)): ?>
-        <tr>
-            <td><?= $no++ ?></td>
-            <td><?= $row['username'] ?></td>
-            <td><?= $row['email'] ?></td>
-            <td><a href="?pg=tambah-user&edit=<?= $row['id']; ?>" class="btn btn-xs btn-success">Edit</a> |
-                <a onclick="return confirm('apakah anda yakin untuk menghapus data ini?')"
-                    href="?pg=user&delete=<?= $row['id']; ?>" class="btn btn-xs btn-danger">Delete</a>
-            </td>
-        </tr>
+            <tr>
+                <td><?= $no++ ?></td>
+                <td><?= $row['username'] ?></td>
+                <td><?= $row['email'] ?></td>
+                <td><a href="?pg=tambah-user&edit=<?= $row['id']; ?>" class="btn btn-xs btn-success">Edit</a> |
+                    <a onclick="return confirm('apakah anda yakin untuk menghapus data ini?')"
+                        href="?pg=user&delete=<?= $row['id']; ?>" class="btn btn-xs btn-danger">Delete</a>
+                </td>
+            </tr>
         <?php endwhile; ?>
     </tbody>
 </table>
