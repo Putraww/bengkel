@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Aug 13, 2024 at 09:36 AM
+-- Generation Time: Aug 14, 2024 at 09:55 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -43,8 +43,7 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `nama_lengkap`, `email`, `pesan`, `no_telpon`, `alamat`, `created_at`, `updated_at`) VALUES
-(18, 'andriyaneka132312', 'and3@gmail.com', 'andreieqw', 'andiya', '123412414', '2024-08-13 02:19:05', '2024-08-13 02:19:10'),
-(19, 'andriyan eka syahputra', 'andriyaneka@gmail.com', 'adaaaa', '080808080', 'adad', '2024-08-13 03:42:22', '2024-08-13 03:42:22');
+(19, 'andriyan eka syahputra13123123', 'andriyaneka@gmail.com', 'adaaaa', '0808080803312312', 'adad', '2024-08-13 03:42:22', '2024-08-14 07:52:01');
 
 -- --------------------------------------------------------
 
@@ -122,7 +121,10 @@ CREATE TABLE `reservasi` (
 INSERT INTO `reservasi` (`id`, `nama`, `email`, `alamat`, `telp`, `id_kendaraan`, `tanggal`, `waktu`, `deskripsi`, `created_at`, `updated_at`) VALUES
 (5, 'aaa', '12andre@gmail.com', 'aaa', '08554524', 2, '2025-02-12', '13:12:00', 'rqrqwr', '2024-08-13 06:11:19', '2024-08-13 06:11:19'),
 (6, 'aaaa12', '12andre12@gmail.com', '123', '3123311', 2, '2011-11-11', '11:11:00', '111', '2024-08-13 06:11:58', '2024-08-13 06:11:58'),
-(7, 'aaaa1231', '1@gmail.com', 'adsa', '123131431', 4, '2201-11-11', '11:11:00', '12213', '2024-08-13 06:12:44', '2024-08-13 06:12:44');
+(7, 'aaaa1231', '1@gmail.com', 'adsa', '123131431', 4, '2201-11-11', '11:11:00', '12213', '2024-08-13 06:12:44', '2024-08-13 06:12:44'),
+(8, 'andre122', 'andre1@gmail.com', 'andre', '1231311', 1, '2121-12-11', '12:12:00', '12113\r\n', '2024-08-13 07:45:05', '2024-08-13 07:45:05'),
+(9, 'andre122', 'andre1@gmail.com', 'andre', '1231311', 1, '2121-12-11', '12:12:00', '12113\r\n', '2024-08-13 07:46:04', '2024-08-13 07:46:04'),
+(10, 'andre122', 'andre1@gmail.com', 'andre', '1231311', 1, '2121-12-11', '12:12:00', '12113\r\n', '2024-08-13 07:53:13', '2024-08-13 07:53:13');
 
 -- --------------------------------------------------------
 
@@ -190,7 +192,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `kendaraan`
@@ -208,7 +210,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `reservasi`
 --
 ALTER TABLE `reservasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`
