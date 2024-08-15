@@ -8,7 +8,7 @@ if (isset($_GET['delete'])) {
 }
 ?>
 <div align="right" class="mb-3">
-    <a href="?pg=tambah-user" class="btn btn-primary">Tambah Pengguna</a>
+    <a href="?pg=tambah-registrasi" class="btn btn-primary">Tambah Registrasi</a>
 </div>
 <table class="table table-bordered">
     <thead>
@@ -27,9 +27,10 @@ if (isset($_GET['delete'])) {
             <td><?= $no++ ?></td>
             <td><?= $row['nama_lengkap'] ?></td>
             <td><?= $row['email'] ?></td>
-            <td><a href="?pg=tambah-user&edit=<?= $row['id']; ?>" class="btn btn-xs btn-success">Edit</a> |
+            <td><?= $row['alamat'] ?></td>
+            <td><a href="?pg=tambah-registrasi&edit=<?= $row['id']; ?>" class="btn btn-xs btn-success">Edit</a> |
                 <a onclick="return confirm('apakah anda yakin untuk menghapus data ini?')"
-                    href="?pg=user&delete=<?= $row['id']; ?>" class="btn btn-xs btn-danger">Delete</a>
+                    href="?pg=registrasi&delete=<?= $row['id']; ?>" class="btn btn-xs btn-danger">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>
