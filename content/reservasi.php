@@ -23,7 +23,7 @@ if (isset($_POST['simpan'])) {
 
     $insert = mysqli_query($koneksi, "INSERT INTO reservasi (nama, email, alamat, telp, id_kendaraan, tanggal, waktu, deskripsi ) VALUES ('$nama','$email','$alamat','$telp','$id_kendaraan','$tanggal','$waktu','$deskripsi')");
 
-    header('Location: ?pg=reservasi&pesan=tambah-berhasil');
+    header('Location: ?pg=done-reservasi&pesan=tambah-berhasil');
 
 }
 $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DESC")
@@ -70,11 +70,11 @@ $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DE
                                         <?php
                                         while ($row = mysqli_fetch_assoc($queryOpt)):
                                             ?>
-                                        <option value="<?= $row['id'] ?>">Jenis kendaraan :
-                                            <?= $row['nama_kendaraan'] ?> |
-                                            Harga :
-                                            <?= $row['harga'] ?>
-                                        </option>
+                                            <option value="<?= $row['id'] ?>">Jenis kendaraan :
+                                                <?= $row['nama_kendaraan'] ?> |
+                                                Harga :
+                                                <?= $row['harga'] ?>
+                                            </option>
                                         <?php endwhile; ?>
                                     </select>
                                 </div>
@@ -95,23 +95,11 @@ $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DE
                         </div>
 
                         <div align="center">
-                            <button id="submitButton" type="submit" name="simpan" class="btn btn-danger">Kirim
+                            <button type="submit" name="simpan" class="btn btn-danger">Kirim
                             </button>
                         </div>
                 </form>
-                <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const form = document.getElementById('reservasi');
-                    const submitButton = document.getElementById('submitButton');
 
-                    // Add an event listener to handle the form submit
-                    submitButton.addEventListener('click', function() {
-                        // Submit the form and then print
-                        form.submit();
-                        window.print();
-                    });
-                });
-                </script>
 
             </div>
         </div>

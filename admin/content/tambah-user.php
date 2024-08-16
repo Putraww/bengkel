@@ -40,6 +40,11 @@ if (isset($_POST['edit'])) {
             placeholder="Masukkan email"><?php echo isset($_GET['edit']) ? $rowEdit['email'] : '' ?></textarea>
     </div>
     <div class="mb-3">
+        <label for="">Alamat</label>
+        <textarea type="text" class="form-control" name="alamat"
+            placeholder="Masukkan Alamat"><?php echo isset($_GET['edit']) ? $rowEdit['alamat'] : '' ?></textarea>
+    </div>
+    <div class="mb-3">
         <label for="">Password</label>
         <textarea type="text" class="form-control" name="pasword"
             placeholder="Masukkan Password"><?php echo isset($_GET['edit']) ? $rowEdit['password'] : '' ?></textarea>

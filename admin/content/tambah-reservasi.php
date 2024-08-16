@@ -4,15 +4,12 @@ if (isset($_POST['simpan'])) {
     $email = $_POST['email'];
     $alamat = $_POST['alamat'];
     $no_telpon = $_POST['no_telpon'];
-    $email = $_POST['email'];
-    $email = $_POST['email'];
-    $email = $_POST['email'];
     $id_kendaraan = $_POST['id_kendaraan'];
 
     //MASUKKAN KE DALAM TABEL USER (FIELD YANG AKAN DI MASUKKAN)
     //VALUE (INPUTAN MASING-MASING KOLOM)
 
-    $insert = mysqli_query($koneksi, "INSERT INTO user (nama, id_level, email, password) VALUES ('$nama',$id_level,'$email','$password')");
+    $insert = mysqli_query($koneksi, "INSERT INTO user (nama, id_kendaraan, email, alamat,no_telpon) VALUES ('$nama',$id_kendaraan,'$email','$alamat','$no_telpon')");
     if (!$insert) {
         header("location:?pg=tambah-user&pesan=tambah-gagal");
     } else {
@@ -29,16 +26,16 @@ if (isset($_GET['edit'])) {
 }
 
 if (isset($_POST['edit'])) {
-    $nama = htmlspecialchars($_POST['nama']);
+    $nama = $_POST['nama'];
     $email = $_POST['email'];
-    $password = sha1($_POST['password']);
-    $id_level = $_POST['id_level'];
-
+    $alamat = $_POST['alamat'];
+    $no_telpon = $_POST['no_telpon'];
+    $id_kendaraan = $_POST['id_kendaraan'];
     $id = $_GET['edit'];
 
     $update = mysqli_query($koneksi, "UPDATE user SET 
-    nama='$nama', id_level='$id_level', 
-    email='$email', password='$password' WHERE id='$id'");
+    nama='$nama', id_kendaraan='$id_kendaraan', 
+    email='$email', alamat='$alamat',no_telpon='$no_telpon' WHERE id='$id'");
     header("location:?pg=user&update=berhasi");
 }
 
