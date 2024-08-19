@@ -48,13 +48,8 @@ ob_start();
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                     <!-- Page Heading -->
                     <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Title</h3>
-                        </div>
-
                         <!-- Content Row -->
                         <?php
                         if (isset($_GET['pg'])) {
@@ -65,16 +60,7 @@ ob_start();
                             include 'content/home.php';
                         }
                         ?>
-
                         <!-- Content Row -->
-
-                        <div class="card-footer">
-                            <h3>Footer</h3>
-                        </div>
-
-
-
-
                     </div>
                     <!-- /.container-fluid -->
 

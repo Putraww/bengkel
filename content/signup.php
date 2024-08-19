@@ -32,6 +32,7 @@ if (isset($_POST['submit'])) {
     // simpan data ke database
     $query = "INSERT INTO user (nama_lengkap, email, password) VALUES ('$nama_lengkap', '$email', '$password')";
     mysqli_query($conn, $query);
+    header('location:?pg=signin');
     echo `<script>alert('Registrasi berhasil!');</script>`;
   }
 }

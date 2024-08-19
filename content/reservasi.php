@@ -70,11 +70,11 @@ $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DE
                                         <?php
                                         while ($row = mysqli_fetch_assoc($queryOpt)):
                                             ?>
-                                            <option value="<?= $row['id'] ?>">Jenis kendaraan :
-                                                <?= $row['nama_kendaraan'] ?> |
-                                                Harga :
-                                                <?= $row['harga'] ?>
-                                            </option>
+                                        <option value="<?= $row['id'] ?>">Jenis kendaraan :
+                                            <?= $row['nama_kendaraan'] ?> |
+                                            Harga :
+                                            <?= $row['harga'] ?>
+                                        </option>
                                         <?php endwhile; ?>
                                     </select>
                                 </div>
@@ -95,7 +95,7 @@ $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DE
                         </div>
 
                         <div align="center">
-                            <button type="submit" name="simpan" class="btn btn-danger">Kirim
+                            <button type="submit" name="simpan" class="btn btn-danger form-control">Kirim
                             </button>
                         </div>
                 </form>

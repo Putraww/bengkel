@@ -21,8 +21,10 @@ if (isset($_GET['edit'])) {
 if (isset($_POST['edit'])) {
     $nama_lengkap = $_POST['nama_lengkap'];
     $email = $_POST['email'];
+    $alamat = $_POST['alamat'];
     $password = sha1($_POST['password']);
-    $update = mysqli_query($koneksi, "UPDATE user SET nama_lengkap='$nama_lengkap', email='$email', password='$password' WHERE id='$id'");
+    $update = mysqli_query($koneksi, "UPDATE user SET nama_lengkap='$nama_lengkap', email='$email', password='$password',  alamat='$alamat' WHERE id='$id'");
+
     header("location:?pg=user&update=berhasil");
     // sebelum where tidak boleh ada tanda koma
 }

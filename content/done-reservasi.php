@@ -5,7 +5,7 @@
         </div>
         <div class="col-md-2 mb-2">
             <div class="float-left">
-                <a class="btn btn-outline-dark" href="laporan/reservasi.php" role="button">Print</a>
+                <a class="btn btn-outline-dark" href="laporan/reservasi.php" role="button">Download!!</a>
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
   $password = anti_inject($_POST['password']);
 
   // cek apakah email dan password cocok
-  $query = "SELECT * FROM member WHERE email = '$email' AND password = '$password'";
+  $query = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
   $result = mysqli_query($conn, $query);
   if (mysqli_num_rows($result) > 0) {
     $member = mysqli_fetch_assoc($result);
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="container"><br><br>
-        <h2>Login Member</h2><br><br>
+        <h2>Login User</h2><br><br>
         <form action="" method="post">
             <div class="form-group">
                 <label for="email">Email:</label>
