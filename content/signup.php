@@ -43,34 +43,33 @@ if (isset($_POST['submit'])) {
 <html>
 
 <head>
-    <title>Registrasi User</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+  <title>Registrasi User</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
 </head>
 
 <body>
-    <div class="container"><br><br>
-        <h2>Registrasi User</h2><br><br>
-        <form action="" method="post">
-            <div class="form-group">
-                <label for="nama_lengkap">Nama:</label>
-                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="alamat">Alamat:</label>
-                <input type="text" class="form-control" id="alamat" name="alamat" required>
-            </div>
-
-            <button type="submit" class="py-1 btn btn-danger" name="submit">Registrasi</button><br><br>
-        </form>
-    </div>
+  <div class="container"><br><br>
+    <h2>Registrasi User</h2><br><br>
+    <form action="" method="post">
+      <div class="form-group">
+        <label for="nama_lengkap">Nama:</label>
+        <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="alamat">Alamat:</label>
+        <input type="text" class="form-control" id="alamat" name="alamat" required>
+      </div>
+      <button type="submit" class="py-1 btn btn-danger" name="submit">Registrasi</button><br><br>
+    </form>
+  </div>
 </body>
 
 </html>

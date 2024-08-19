@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Aug 14, 2024 at 09:55 AM
+-- Generation Time: Aug 19, 2024 at 09:06 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_bengkel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `email`, `password`, `created_at`, `updated_at`) VALUES
+(1, 'andriyan@gmail.com', '123\r\n', '2024-08-19 04:13:54', '2024-08-19 04:13:54');
 
 -- --------------------------------------------------------
 
@@ -43,7 +64,7 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `nama_lengkap`, `email`, `pesan`, `no_telpon`, `alamat`, `created_at`, `updated_at`) VALUES
-(19, 'andriyan eka syahputra13123123', 'andriyaneka@gmail.com', 'adaaaa', '0808080803312312', 'adad', '2024-08-13 03:42:22', '2024-08-14 07:52:01');
+(21, 'syh', 'syh@gmail.com', 'diperbaiki lagi', '12345', 'bogor', '2024-08-19 04:52:59', '2024-08-19 04:52:59');
 
 -- --------------------------------------------------------
 
@@ -72,31 +93,6 @@ INSERT INTO `kendaraan` (`id`, `nama_kendaraan`, `harga`, `created_at`, `updated
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
---
-
-CREATE TABLE `member` (
-  `id` int(11) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `nama_lengkap` varchar(100) NOT NULL,
-  `alamat` text NOT NULL,
-  `deleted_at` tinyint(1) NOT NULL DEFAULT 0,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `member`
---
-
-INSERT INTO `member` (`id`, `email`, `password`, `nama_lengkap`, `alamat`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(14, 'andre@gmail.com', '123', 'ANDRE', 'afdsadaadfd', 0, '2024-08-13 07:08:07', '2024-08-13 07:08:07'),
-(15, 'andriyan@gmail.com', '123', 'andriyan', '', 0, '2024-08-13 07:24:16', '2024-08-13 07:24:16');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `reservasi`
 --
 
@@ -119,12 +115,22 @@ CREATE TABLE `reservasi` (
 --
 
 INSERT INTO `reservasi` (`id`, `nama`, `email`, `alamat`, `telp`, `id_kendaraan`, `tanggal`, `waktu`, `deskripsi`, `created_at`, `updated_at`) VALUES
-(5, 'aaa', '12andre@gmail.com', 'aaa', '08554524', 2, '2025-02-12', '13:12:00', 'rqrqwr', '2024-08-13 06:11:19', '2024-08-13 06:11:19'),
-(6, 'aaaa12', '12andre12@gmail.com', '123', '3123311', 2, '2011-11-11', '11:11:00', '111', '2024-08-13 06:11:58', '2024-08-13 06:11:58'),
-(7, 'aaaa1231', '1@gmail.com', 'adsa', '123131431', 4, '2201-11-11', '11:11:00', '12213', '2024-08-13 06:12:44', '2024-08-13 06:12:44'),
-(8, 'andre122', 'andre1@gmail.com', 'andre', '1231311', 1, '2121-12-11', '12:12:00', '12113\r\n', '2024-08-13 07:45:05', '2024-08-13 07:45:05'),
-(9, 'andre122', 'andre1@gmail.com', 'andre', '1231311', 1, '2121-12-11', '12:12:00', '12113\r\n', '2024-08-13 07:46:04', '2024-08-13 07:46:04'),
-(10, 'andre122', 'andre1@gmail.com', 'andre', '1231311', 1, '2121-12-11', '12:12:00', '12113\r\n', '2024-08-13 07:53:13', '2024-08-13 07:53:13');
+(20, 'andriyn123', 'andriyan123@gmail.com', '123', '123', 1, '1212-12-12', '12:21:00', '12121\r\n', '2024-08-19 04:50:04', '2024-08-19 04:50:04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `status`
+--
+
+CREATE TABLE `status` (
+  `id` int(11) NOT NULL,
+  `menunggu` varchar(100) NOT NULL,
+  `pengerjaan` varchar(100) NOT NULL,
+  `selesai` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -134,8 +140,9 @@ INSERT INTO `reservasi` (`id`, `nama`, `email`, `alamat`, `telp`, `id_kendaraan`
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL,
+  `nama_lengkap` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `alamat` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -145,13 +152,18 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(6, 'andre', 'a131n@gmail.com\r\n', '', '2024-08-13 02:04:03', '2024-08-13 02:04:11'),
-(7, 'ada', 'asa@gmail.com', '112', '2024-08-13 02:24:28', '2024-08-13 02:24:28');
+INSERT INTO `user` (`id`, `nama_lengkap`, `email`, `alamat`, `password`, `created_at`, `updated_at`) VALUES
+(14, 'ada12', '121@gmail.com', ',makmur', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '2024-08-19 04:52:17', '2024-08-19 04:52:17');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `comment`
@@ -166,17 +178,17 @@ ALTER TABLE `kendaraan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `member`
---
-ALTER TABLE `member`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `reservasi`
 --
 ALTER TABLE `reservasi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `kendaraan` (`id_kendaraan`);
+
+--
+-- Indexes for table `status`
+--
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -189,10 +201,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `kendaraan`
@@ -201,22 +219,22 @@ ALTER TABLE `kendaraan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `member`
---
-ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
 -- AUTO_INCREMENT for table `reservasi`
 --
 ALTER TABLE `reservasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `status`
+--
+ALTER TABLE `status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
@@ -227,6 +245,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `reservasi`
   ADD CONSTRAINT `kendaraan` FOREIGN KEY (`id_kendaraan`) REFERENCES `kendaraan` (`id`);
+
+--
+-- Constraints for table `status`
+--
+ALTER TABLE `status`
+  ADD CONSTRAINT `id_status` FOREIGN KEY (`id`) REFERENCES `reservasi` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
