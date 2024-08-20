@@ -37,15 +37,14 @@
                 <a href="?pg=home" class="nav-item nav-link text-dark">Home</a>
                 <a href="?pg=about" class="nav-item nav-link text-dark">About Us</a>
                 <a href="?pg=reservasi" class="nav-item nav-link text-dark">Booking Service</a>
-                <a href="?pg=testimoni" class="nav-item nav-link text-dark">Testimoni</a>
                 <a href="?pg=saran" class="nav-item nav-link text-dark">Saran Dan Keluhan</a>
                 <?php if (isset($_SESSION['nama_lengkap'])) { ?>
-                <a class="btn btn-secondary-outline"><?php echo $_SESSION['nama_lengkap']; ?></a><a
-                    class="btn btn-danger ms-3" href="?pg=logout">Logout</a>
+                    <a class="btn btn-secondary-outline"><?php echo $_SESSION['nama_lengkap']; ?></a><a
+                        class="btn btn-danger ms-3" href="?pg=logout">Logout</a>
                 <?php } else { ?>
-                <a class="btn btn-secondary-outline text-dark nav-link " href="?pg=signin">Sign
-                    In</a><a class="btn btn-secondary-outline text-dark nav-link" href="?pg=signup">Sign Up</a>
-            </div>
+                    <a class="btn btn-secondary-outline text-dark nav-link " href="?pg=signin">Sign
+                        In</a><a class="btn btn-secondary-outline text-dark nav-link" href="?pg=signup">Sign Up</a>
+                </div>
             <?php } ?>
         </div>
 </div>

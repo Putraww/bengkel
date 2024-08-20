@@ -33,10 +33,9 @@ if (isset($_POST['submit'])) {
     $query = "INSERT INTO user (nama_lengkap, email, password) VALUES ('$nama_lengkap', '$email', '$password')";
     mysqli_query($conn, $query);
     header('location:?pg=signin');
-    echo `<script>alert('Registrasi berhasil!');</script>`;
   }
 }
-
+echo `<script>alert('Registrasi berhasil!');</script>`;
 ?>
 
 <!DOCTYPE html>
@@ -52,20 +51,24 @@ if (isset($_POST['submit'])) {
     <h2>Registrasi User</h2><br><br>
     <form action="" method="post">
       <div class="form-group">
-        <label for="nama_lengkap">Nama:</label>
-        <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
+        <label for="nama_lengkap">Nama Lengkap :</label>
+        <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required
+          placeholder="Silahkan Masukkan Nama Lengkap">
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" name="email" required>
+        <label for="email">Email :</label>
+        <input type="email" class="form-control" id="email" name="email" required
+          placeholder="Silahkan Masukkan Email Anda">
       </div>
       <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" class="form-control" id="password" name="password" required>
+        <label for="password">Password :</label>
+        <input type="password" class="form-control" id="password" name="password" required
+          placeholder="Silahkan Masukkan Password Anda">
       </div>
       <div class="form-group">
-        <label for="alamat">Alamat:</label>
-        <input type="text" class="form-control" id="alamat" name="alamat" required>
+        <label for="alamat">Alamat :</label>
+        <input type="text" class="form-control" id="alamat" name="alamat" required
+          placeholder="Silahkan Masukkan Alamat Lengkap">
       </div>
       <button type="submit" class="py-1 btn btn-danger" name="submit">Registrasi</button><br><br>
     </form>

@@ -32,6 +32,7 @@ ob_start();
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+
         <!-- Sidebar -->
         <?php include "inc/sidebar.php" ?>
         <!-- End of Sidebar -->
@@ -40,17 +41,14 @@ ob_start();
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
-            <div id="content">
+            <section class="content">
 
-                <!-- Topbar -->
-                <?php include "inc/navbar.php" ?>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <!-- Page Heading -->
-                    <div class="card">
-                        <!-- Content Row -->
+                <!-- Default box -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Title</h3>
+                    </div>
+                    <div class="card-body">
                         <?php
                         if (isset($_GET['pg'])) {
                             if (file_exists('content/' . $_GET['pg'] . '.php')) {
@@ -60,24 +58,18 @@ ob_start();
                             include 'content/home.php';
                         }
                         ?>
-                        <!-- Content Row -->
                     </div>
-                    <!-- /.container-fluid -->
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        Footer
+                    </div>
+                    <!-- /.card-footer-->
+
 
                 </div>
-                <!-- End of Main Content -->
+                <!-- /.card -->
 
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2024</span>
-                        </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
-
-            </div>
+            </section>
             <!-- End of Content Wrapper -->
 
         </div>

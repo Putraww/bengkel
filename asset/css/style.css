@@ -6753,7 +6753,7 @@ button.bg-warning:focus {
 }
 
 .bg-danger {
-  background-color: #dc3545 !important;
+  background-color: red !important;
 }
 
 a.bg-danger:hover,

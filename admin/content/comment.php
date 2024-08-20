@@ -10,10 +10,10 @@ if (isset($_GET['delete'])) {
 ?>
 <div class="card shadow">
     <div class="card-header ">
-        <h6 class="m-0 font-weight-bold text-primary">Comment DataTables</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Saran Dan Keluhan DataTables</h6>
     </div>
     <div align="right" class="mb-3 px-2 py-3">
-        <a href="?pg=tambah-comment" class="btn btn-primary">Tambah Comment</a>
+        <a href="?pg=tambah-comment" class="btn btn-primary">Tambah Saran Dan Keluhan</a>
     </div>
     <table class="table table-bordered">
         <thead>

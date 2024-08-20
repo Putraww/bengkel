@@ -7,6 +7,7 @@ if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $delete = mysqli_query($koneksi, "DELETE FROM reservasi WHERE id ='$id'");
     header('location:?pg=reservasi&hapus=berhasil');
+
 }
 
 if (isset($_POST['simpan'])) {
@@ -65,16 +66,17 @@ $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DE
                                     $queryOpt = mysqli_query($koneksi, "SELECT * FROM kendaraan");
                                     // var_dump($row); untuk mengecek
                                     ?>
-                                    <option>Pilih Kendaraan :</option>
+                                    <option>Jenis Kendaraan :</option>
                                     <select class="form-control" name="id_kendaraan" id="id_kendaraan">
+                                        <option value="">--- Pilih Jenis Kendaraan ---</option>
                                         <?php
                                         while ($row = mysqli_fetch_assoc($queryOpt)):
                                             ?>
-                                        <option value="<?= $row['id'] ?>">Jenis kendaraan :
-                                            <?= $row['nama_kendaraan'] ?> |
-                                            Harga :
-                                            <?= $row['harga'] ?>
-                                        </option>
+                                            <option value="<?= $row['id'] ?>">Jenis kendaraan :
+                                                <?= $row['nama_kendaraan'] ?> |
+                                                Harga :
+                                                <?= $row['harga'] ?>
+                                            </option>
                                         <?php endwhile; ?>
                                     </select>
                                 </div>
@@ -94,7 +96,7 @@ $queryReservasi = mysqli_query($koneksi, "SELECT * FROM reservasi ORDER BY id DE
                             </div>
                         </div>
 
-                        <div align="center">
+                        <div align="center" class="py-4">
                             <button type="submit" name="simpan" class="btn btn-danger form-control">Kirim
                             </button>
                         </div>

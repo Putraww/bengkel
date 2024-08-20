@@ -1,4 +1,9 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+    <ul class="navbar-nav">
+        <li class="nav-item nav-link d-none d-sm-inline-block">
+            <a href="?pg=home" class="nav-link">Home</a>
+        </li>
+    </ul>
 
     <!-- Sidebar Toggle (Topbar) -->
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
