@@ -1,6 +1,6 @@
 <?php
 // koneksi database
-$conn = mysqli_connect("localhost:3307", "root", "", "db_bengkel");
+$conn = mysqli_connect("localhost:3307", "root", "", "bengkel");
 
 // cek koneksi
 if (!$conn) {
